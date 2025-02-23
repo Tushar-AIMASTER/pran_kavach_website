@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - ANARGHYA</title>
+  <link rel="icon" href="images/icon.ico" type="image/x-icon">
+  <style>
+    /* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+  /* nav bar styles */
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo{
+    position: sticky;
+    
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    user-select: none;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+    display: none;
+}
+
+.navbar {
+    box-shadow: 0 5px 4px rgb(146 161 176 / 15%);
+    position: sticky;
+    top: 0;
+    opacity: 100%;
+    background:white;
+    color:black;
+ 
+
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+
+.navbar img {
+    margin-left: 3rem;
+    height: 45px;
+}
+
+.menu-items {
+    order: 2;
+    display: flex;
+    margin-right: 3rem;
+}
+
+.menu-items li {
+    list-style: none;
+    margin-left: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.navbar-container ul a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 18px;
+    position: relative;
+}
+
+.navbar-container ul a:after {
+    content: "";
+    position: absolute;
+    background: var(--primary-color);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.navbar-container ul a:hover:after {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        opacity: 0.95;
+    }
+    .navbar-container input[type="checkbox"],
+    .navbar-container .hamburger-lines {
+        display: block;
+    }
+    .navbar-container {
+        display: block;
+        position: relative;
+        height: 64px;
+    }
+    .navbar-container input[type="checkbox"] {
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 30px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .navbar-container .hamburger-lines {
+        display: block;
+        height: 28px;
+        width: 35px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .navbar-container .hamburger-lines .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #333;
+    }
+    .navbar-container .hamburger-lines .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.3s ease-in-out;
+    }
+    .navbar-container .hamburger-lines .line2 {
+        transition: transform 0.2s ease-in-out;
+    }
+    .navbar-container .hamburger-lines .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.3s ease-in-out;
+    }
+    .navbar .menu-items {
+        padding-top: 100px;
+        background: #fff;
+        height: 100vh;
+        max-width: 100%;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        /* margin-left: -40px;
+        padding-left: 40px; */
+        text-align: center;
+        transition: transform 0.5s ease-in-out;
+        /* box-shadow: 5px 0px 10px 0px #aaa; */
+        overflow: scroll;
+    }
+    .navbar .menu-items li {
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+    .menu-items li,
+    .navbar img {
+        margin: 0;
+    }
+    .navbar .menu-items li:nth-child(1) {
+        margin-top: 1.5rem;
+    }
+    .navbar-container .logo img {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        margin-top: 8px;
+    }
+    .navbar-container input[type="checkbox"]:checked~.menu-items {
+        transform: translateX(0);
+    }
+    .navbar-container input[type="checkbox"]:checked~.hamburger-lines .line1 {
+        transform: rotate(45deg);
+    }
+    .navbar-container input[type="checkbox"]:checked~.hamburger-lines .line2 {
+        transform: scaleY(0);
+    }
+    .navbar-container input[type="checkbox"]:checked~.hamburger-lines .line3 {
+        transform: rotate(-45deg);
+    }
+    .navbar-container input[type="checkbox"]:checked~.home_page img {
+        display: none;
+        background: #fff;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar-container input[type="checkbox"]:checked~.navbar-container img {
+        display: none;
+    }
+}
+  
+
+/* css for about page  */
+  
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+.about-section, .team-section {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.about-section h2, .team-section h2 {
+    color: #333;
+}
+.team-member {
+    margin-bottom: 20px;
+}
+.team-member h3 {
+    margin: 0;
+    color: #444;
+}
+.team-member p {
+    color: #666;
+}
+
+
+
+
+
+  /* Footer Section */
+  footer {
+    background: skyblue;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+
+
+
+  a{
+    color:blue
+  }
+  </style>
+</head>
+<body>
+
+      <!-- Header Section -->
+      <nav class="navbar">
+        <div class="navbar-container">
+            <input type="checkbox" name="" id="checkbox">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <div class="logo">
+              <img src="images/web_logo.png" style="height: 50px;width:240px;margin-top: 2px;margin-left: 640px;" >
+            </div>
+        </div>
+    </nav>
+
+  <!-- About Section -->
+  <header>
+    <h1>About Us</h1>
+</header>
+<div class="container">
+    <section class="about-section">
+        <h2>About the Project</h2>
+        <p>This Python project implements a drowsiness detection system using facial landmark recognition and eye aspect ratio (EAR). It also includes a graphical user interface (GUI) for ease of use of the Application.</p>
+        <p>This program detects drowsiness in real-time by analyzing the eye aspect ratio (EAR) of the driver using computer vision techniques. The EAR is a metric that measures the distance between the vertical points of the eye relative to the horizontal distance between the eye corners. When a driver is drowsy, their eyelids tend to droop, which decreases the EAR.</p>
+        <br>
+        <p>The program utilizes OpenCV and dlib libraries for facial landmark detection and eye aspect ratio calculation. It also includes functionalities like:</p>
+        <br>
+        <p>GUI with functionalities to start/stop detection and view history. Audio and visual alerts for drowsiness detection. Recording timestamps of drowsiness detection events in a text file for history tracking. This project implements a real-time drowsiness detection system using computer vision techniques. It captures video from the webcam, analyzes the eye aspect ratio (EAR) to detect drowsiness, and triggers an alert (sound and visual) if the driver appears to be falling asleep. It also logs drowsiness events to a text file and provides reminders to take breaks. </p>
+        <br>
+    </section>
+    <section class="team-section">
+        <h2>About Us</h2>
+        <div class="team-member">
+            <h3>Tushar Srivastava</h3>
+            <p>Backend Developer specializing in Computer Vision. Currently pursuing B.Tech in CS AIML at Kanpur Institute of Technology. Passionate about transforming complex algorithms into efficient backend solutions.</p>
+
+            <table id="social"><tr> 
+              <th><a href="https://github.com/Tushar-AIMASTER" target="_blank"><img src="images/github-mark.png" alt="git hub" width="30pxpx"></a></th> 
+            <th><a href="https://www.linkedin.com/in/tushar-srivastava-ai/ " target="_blank" > <img src="images/linked in.png" alt="linked" width="30px" ></a></th>
+          </tr></table>
+            <br>
+        <div class="team-member">
+            
+          <h3>Satvik Yadav</h3>
+            <p>Full Stack Developer with a knack for building dynamic and responsive web applications. Pursuing B.Tech in CS AIML at Kanpur Institute of Technology. Bridging the gap between frontend flair and backend logic.</p>
+            <table id="social"><tr> 
+              <th><a href="https://github.com/SatvikYadavv" target="_blank"><img src="images/github-mark.png" alt="git hub" width="30pxpx"></a></th> 
+            <th><a href="https://www.linkedin.com/in/satvik-yadavin/"  target="_blank"><img src="images/linked in.png" alt="linked" width="30px" ></a></th>
+          </tr></table>
+        </div>
+        <br>
+        <div class="team-member">
+            
+          <h3>Arpit Raj Katiyar</h3>
+            <p>Frontend Developer dedicated to crafting intuitive user experiences. Currently pursuing B.Tech in CS AIML at Kanpur Institute of Technology. Expert in bringing designs to life with seamless interactions.</p>
+            <table id="social"><tr> 
+              <th><a href="https://github.com/mrark1" target="_blank"><img src="images/github-mark.png" alt="git hub" width="30pxpx"></a></th> 
+            <th><a href="https://www.linkedin.com/in/ark0001/" target="_blank"><img src="images/linked in.png" alt="linked" width="30px" ></a></th>
+          </tr></table>
+            
+        </div>
+        <br>
+        <div class="team-member">
+
+            <h3>Mayank kumar Kashyap</h3>
+            <p>UI Designer focused on creating visually appealing and user-centric designs. Pursuing B.Tech in CS AIML at Kanpur Institute of Technology. Combines creativity with functionality for impactful user interfaces.</p>
+            <table id="social"><tr> 
+              <th><a href="https://github.com/MahiKs7" target="_blank"><img src="images/github-mark.png" alt="git hub" width="30pxpx"></a></th> 
+            <th><a href="https://www.linkedin.com/in/mayank-kumar-kashyap-a1122b328/"  target="_blank"><img src="images/linked in.png" alt="linked" width="30px" ></a></th>
+          </tr></table>
+        </div>
+    </section>
+</div>
+  <script src="script.js"></script>
+
+   <!-- Footer Section -->
+   <footer>
+    <p>&copy; <b> 2025 ANARGHYA.    All Rights Reserved. </b></p>
+  </footer>
+</body>
+</html>
